@@ -16,11 +16,13 @@ SOURCES += main.cpp\
         mainwindow.cpp\
     plateau.cpp \
     pierre.cpp \
-    cases.cpp
+    cases.cpp \
+    joueur.cpp
 
 HEADERS  += mainwindow.h\
     plateau.h \
     pierre.h \
-    cases.h
+    cases.h \
+    joueur.h
 
 FORMS    += mainwindow.ui

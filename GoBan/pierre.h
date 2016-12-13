@@ -1,13 +1,17 @@
 #ifndef PIERRE_H
 #define PIERRE_H
 
+#include <string>
 
 class Pierre
 {
 private:
-    String color;
+    std::string color;
 public:
-    Pierre(String _color);
+    Pierre(std::string _color);
+    Pierre();
+
+    bool isNotSet();
 };
 
 #endif // PIERRE_H

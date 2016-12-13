@@ -2,12 +2,17 @@
 
 Cases::Cases(int _posx, int _posy)
 {
-    this->contenu = nullptr;
+    this->contenu = Pierre();
     this->coordx = _posx;
     this->coordy = _posy;
 }
 
-void Cases::setPierre(Pierre _contenu)
+void Cases::setContenu(Pierre& _contenu)
 {
     this->contenu = _contenu;
+}
+
+bool Cases::isFree()
+{
+    return this->contenu.isNotSet();
 }
