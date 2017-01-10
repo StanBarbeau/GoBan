@@ -7,7 +7,7 @@ Cases::Cases(int _posx, int _posy)
     this->coordy = _posy;
 }
 
-void Cases::setContenu(Pierre& _contenu)
+void Cases::setContenu(Pierre const& _contenu)
 {
     this->contenu = _contenu;
 }

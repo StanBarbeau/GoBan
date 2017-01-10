@@ -4,18 +4,18 @@
 #include "cases.h"
 #include "pierre.h"
 #include <string>
+#include <vector>
 
 class Plateau
 {
     int sizex;
     int sizey;
-    Cases cases[];
+    std::vector<Cases> cases;
 public:
     Plateau(int _sizex, int _sizey);
 
-    void setCases(int posx, int posy, Pierre& pierre);
+    void setCases(int posx, int posy, const Pierre &pierre);
     Cases getCases(int posx, int posy);
-    bool isFree(Cases _case);
     bool isFree(int posx, int posy);
 };
 

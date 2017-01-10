@@ -6,13 +6,13 @@
 
 class Cases
 {
-    Pierre& contenu;
+    Pierre contenu;
     int coordx;
     int coordy;
 public:
     Cases(int coordx, int coordy);
 
-    void setContenu(Pierre& _contenu);
+    void setContenu(const Pierre &_contenu);
     bool isFree();
 };
 

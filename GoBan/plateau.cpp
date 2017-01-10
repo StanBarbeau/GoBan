@@ -5,6 +5,7 @@ Plateau::Plateau(int _sizex, int _sizey)
 {
     this->sizex = _sizex;
     this->sizey = _sizey;
+    this->cases = {};
 
     for (int j = 0; j < _sizey; j++)
     {
@@ -15,19 +16,14 @@ Plateau::Plateau(int _sizex, int _sizey)
     }
 }
 
-void Plateau::setCases(int posx, int posy, Pierre& pierre)
+void Plateau::setCases(int posx, int posy, Pierre const& pierre)
 {
     this->cases[this->sizex * posy + posx].setContenu(pierre);
 }
 
-bool Plateau::isFree(Cases _case)
-{
-    return _case.isFree();
-}
-
 bool Plateau::isFree(int posx, int posy)
 {
-    return this->isFree(this->getCases(posx, posy));
+    return this->getCases(posx, posy).isFree();
 }
 
 Cases Plateau::getCases(int posx, int posy)
