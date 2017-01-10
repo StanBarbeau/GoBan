@@ -11,8 +11,10 @@ class Plateau
     int sizex;
     int sizey;
     std::vector<Cases> cases;
+
 public:
     Plateau(int _sizex, int _sizey);
+    ~Plateau();
 
     void setCases(int posx, int posy, const Pierre &pierre);
     Cases getCases(int posx, int posy);

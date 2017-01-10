@@ -12,7 +12,7 @@ class Joueur
     int tour;
 public:
     Joueur(std::string _color);
-
+    ~Joueur();
     void abandon();
     void defaite();
     void victoire();

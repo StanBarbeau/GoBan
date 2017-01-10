@@ -30,3 +30,14 @@ Cases Plateau::getCases(int posx, int posy)
 {
     return this->cases[this->sizex * posy + posx];
 }
+
+Plateau::~Plateau()
+{
+    for(int j = 0; j < this->sizey; j++)
+    {
+        for(int i = 0; i < this->sizex; i++)
+        {
+            this->getCases(i,j).~Cases();
+        }
+    }
+}
