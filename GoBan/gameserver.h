@@ -6,9 +6,11 @@
 
 class GameServer
 {
+    int dimension;
 public:
     GameServer();
     void lancerPartie();
+    void setDimension(int dim);
 };
 
 #endif // GAMESERVER_H

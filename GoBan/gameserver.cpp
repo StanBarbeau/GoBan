@@ -1,4 +1,5 @@
 #include "gameserver.h"
+#include <thread>
 
 
 void partie(int dimension)
@@ -12,18 +13,20 @@ void partie(int dimension)
     {
         etat = false;
     }
-
-    Player1.~Joueur();
-    Player2.~Joueur();
-    board.~Plateau();
 }
 
 GameServer::GameServer()
 {
-
+    this->dimension = 0;
 }
 
-GameServer::lancerPartie()
+void GameServer::lancerPartie()
 {
+    std::thread jeu (partie, this->dimension);
+    jeu.join();
+}
 
+void GameServer::setDimension(int dim)
+{
+    this->dimension = dim;
 }

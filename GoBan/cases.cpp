@@ -1,5 +1,6 @@
 #include "cases.h"
 
+
 Cases::Cases(int _posx, int _posy)
 {
     this->contenu = Pierre();

@@ -17,12 +17,14 @@ SOURCES += main.cpp\
     plateau.cpp \
     pierre.cpp \
     cases.cpp \
-    joueur.cpp
+    joueur.cpp \
+    gameserver.cpp
 
 HEADERS  += mainwindow.h\
     plateau.h \
     pierre.h \
     cases.h \
-    joueur.h
+    joueur.h \
+    gameserver.h
 
 FORMS    += mainwindow.ui

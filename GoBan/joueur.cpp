@@ -22,8 +22,3 @@ void Joueur::defaite()
 {
     this->status = "Défaite.";
 }
-
-Joueur::~Joueur()
-{
-    this->pierre.~Pierre();
-}

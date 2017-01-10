@@ -5,13 +5,12 @@ Plateau::Plateau(int _sizex, int _sizey)
 {
     this->sizex = _sizex;
     this->sizey = _sizey;
-    this->cases = {};
 
     for (int j = 0; j < _sizey; j++)
     {
         for(int i = 0; i < _sizex; i++)
         {
-            this->cases[ i + j * _sizex ] = Cases(i,j);
+            this->cases[ i + j * _sizex] = Cases(i,j);
         }
     }
 }
@@ -29,15 +28,4 @@ bool Plateau::isFree(int posx, int posy)
 Cases Plateau::getCases(int posx, int posy)
 {
     return this->cases[this->sizex * posy + posx];
-}
-
-Plateau::~Plateau()
-{
-    for(int j = 0; j < this->sizey; j++)
-    {
-        for(int i = 0; i < this->sizex; i++)
-        {
-            this->getCases(i,j).~Cases();
-        }
-    }
 }
