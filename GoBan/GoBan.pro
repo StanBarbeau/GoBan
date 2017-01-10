@@ -28,3 +28,6 @@ HEADERS  += mainwindow.h\
     gameserver.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    images.qrc
