@@ -11,7 +11,7 @@ class Cases
     int coordy;
 public:
     Cases(int coordx, int coordy);
-
+    Cases();
     void setContenu(const Pierre &_contenu);
     bool isFree();
 };
