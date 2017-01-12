@@ -13,6 +13,7 @@ class Plateau
     Cases cases[];
 
 public:
+    Plateau();
     Plateau(int _sizex, int _sizey);
     void setCases(int posx, int posy, const Pierre &pierre);
     Cases getCases(int posx, int posy);

@@ -9,12 +9,14 @@ class Joueur
     std::string color;
     Pierre pierre;
     std::string status;
-    int tour;
 public:
+    Joueur();
     Joueur(std::string _color);
+    void setColor(std::string newcolor);
     void abandon();
     void defaite();
     void victoire();
+    void enPartie();
 };
 
 #endif // JOUEUR_H
