@@ -1,6 +1,9 @@
 #include "cases.h"
 
 
+
+Cases::Cases(){}
+
 Cases::Cases(int _posx, int _posy)
 {
     this->contenu = Pierre();
@@ -8,7 +11,6 @@ Cases::Cases(int _posx, int _posy)
     this->coordy = _posy;
 }
 
-Cases::Cases(){}
 void Cases::setContenu(Pierre const& _contenu)
 {
     this->contenu = _contenu;
@@ -17,4 +19,9 @@ void Cases::setContenu(Pierre const& _contenu)
 bool Cases::isFree()
 {
     return this->contenu.isNotSet();
+}
+
+Pierre Cases::getContenu()
+{
+    return this->contenu;
 }
