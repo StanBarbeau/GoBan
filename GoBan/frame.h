@@ -17,5 +17,5 @@ protected:
     void paintEvent( QPaintEvent* );
 
 private:
-    int m_radius;
+    int stone_radius;
 };
