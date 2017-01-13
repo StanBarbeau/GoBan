@@ -10,6 +10,7 @@ private:
 public:
     Pierre(std::string _color);
     Pierre();
+    std::string getColor();
 
     bool isNotSet();
 };

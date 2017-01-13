@@ -48,7 +48,7 @@ bool GameServer::testKo(int x, int y)
 int GameServer::putStoneRequest(int x, int y)
 {
     int res = 0;
-
+/*
     if (this->etat)
     {
         res = 3;
@@ -59,7 +59,7 @@ int GameServer::putStoneRequest(int x, int y)
         {
             this->getPlateau().setCases(x,y,this->activplayer.getPierre());
             res += (100*x + y);
-            /*
+
             if (this->activplayer == this->player1)
             {
                 res += 10000;
@@ -68,9 +68,9 @@ int GameServer::putStoneRequest(int x, int y)
             {
                 res += 20000;
             }
-            */
+
         }
-    }
+    }*/
 
     // Cette fonction renvoie un entier de l'ordre de 10,000 qui respecte la forme suivante:
     // res = 0 déjà une pierre en place, ou règle de ko.

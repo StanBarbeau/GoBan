@@ -26,17 +26,20 @@ void Frame::paintEvent( QPaintEvent* pe )
     if(gserver!=0 && stone_radius > 0 )
     {
         QPainter p( this );
-        //QPoint case=QPoint(100,100);
-        p.setBrush(QBrush(Qt::black));
-        //p.setBrush(QBrush(Qt::white));
-        //p.drawEllipse(this->frameRect().center(), stone_radius, stone_radius );
         for(int i=0;i<19;i++)
         {
             for (int j=0 ; j<19 ; j++)
             {
-                //if((i+j)%2==0){
-                //p.drawEllipse(QPoint(15+22.8*i,15+22.8*j), stone_radius, stone_radius );
-                //}
+                /*Cases caseij=this->gserver->getPlateau().getCases(i,j);
+                if(!caseij.isFree())
+                {
+                    if(caseij.getContenu().getColor()=="white"){
+                        p.setBrush(QBrush(Qt::white));
+                    } else {
+                        p.setBrush(QBrush(Qt::black));
+                    }
+                    p.drawEllipse(QPoint(15+22.8*i,15+22.8*j), stone_radius, stone_radius );
+                }*/
             }
         }
     }

@@ -7,12 +7,8 @@ MainWindow::MainWindow(QWidget *parent,GameServer* GS) :
 {
     this->gserver=GS;
 
-    //stonesFrame = new Frame(this);
-    //stonesFrame->setGeometry(10, 10, 80, 30);
-    //stonesFrame->setFixedSize(300,400);
     ui->setupUi(this);
     this->ui->gobanFrame->connectToServer(GS);
-    //ui->gobanFrame->setAttribute( Qt::WA_TransparentForMouseEvents );
 }
 
 MainWindow::~MainWindow()
@@ -40,24 +36,22 @@ void MainWindow::on_size_box_currentIndexChanged(const QString &arg1)
 
 void MainWindow::on_pass_button_clicked()
 {
-    //TODOFUNCTION Barbeau
-    //this->gserver->playerPassed();
+    this->gserver->playerPassed();
+    update();
 }
 
 
 void MainWindow::on_resign_button_clicked()
 {
 
-    //TODOFUNCTION Barbeau
-    //this->gserver->playerResigned();
+    this->gserver->playerResigned();
     update();
 }
 
 
 void MainWindow::on_play_button_clicked()
 {
-    //TODOFUNCTION Barbeau
-    //this->gserver->newGame();
+    this->gserver->newGame();
 }
 
 void MainWindow::on_radioButton_toggled(bool checked)
@@ -76,11 +70,9 @@ QPoint MainWindow::clickPosToCases(QPoint p){
 void MainWindow::on_goban_Button_clicked()
 {
     QPoint p = this->mapFromGlobal(QCursor::pos());
-    //qDebug()<<p.rx()<<" "<<p.ry();
     p=clickPosToCases(p);
-    if (p.rx()>=0 && p.rx()<19 && p.ry()>=0 && p.ry()<19){// Case where the click position doesn't match with a cross of the Goban
-    //TODOFUNCTION Barbeau
-    //this->gserver->putStoneRequest(p.rx(),p.ry());
+    if (p.rx()>=0 && p.rx()<19 && p.ry()>=0 && p.ry()<19){// Case where the click position matches with the size of the goban
+       this->gserver->putStoneRequest(p.rx(),p.ry());
     }
    update();
 

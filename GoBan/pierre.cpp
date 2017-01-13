@@ -10,6 +10,10 @@ Pierre::Pierre()
     this->color = "undefined";
 }
 
+std::string Pierre::getColor(){
+    return this->color;
+}
+
 bool Pierre::isNotSet()
 {
     return (this->color == "undefined");

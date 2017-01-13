@@ -2,6 +2,8 @@
 
 #include <QFrame>
 #include "gameserver.h"
+#include "cases.h"
+
 class Frame : public QFrame
 {
 Q_OBJECT
