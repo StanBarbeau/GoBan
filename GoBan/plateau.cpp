@@ -1,5 +1,9 @@
 #include "plateau.h"
 
+Plateau::Plateau()
+{
+
+}
 
 Plateau::Plateau(int _sizex, int _sizey)
 {
