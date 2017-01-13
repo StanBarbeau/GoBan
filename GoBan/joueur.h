@@ -17,6 +17,7 @@ public:
     void defaite();
     void victoire();
     void enPartie();
+    Pierre getPierre();
 };
 
 #endif // JOUEUR_H

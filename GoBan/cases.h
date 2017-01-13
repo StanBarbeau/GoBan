@@ -13,6 +13,7 @@ public:
     Cases(int coordx, int coordy);
     Cases();
     void setContenu(const Pierre &_contenu);
+    Pierre getContenu();
     bool isFree();
 };
 

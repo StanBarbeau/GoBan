@@ -14,11 +14,16 @@ class GameServer
     bool etat;
     Plateau board;
 
+    bool testKo(int x, int y);
+
 public:
     GameServer();
-    void lancerPartie();
+    bool newGame();
     void setDimension(int dim);
-    int jouercoup(int x, int y);
+    int putStoneRequest(int x, int y);
+    void playerPassed();
+    void playerResigned();
+    Plateau getPlateau();
 };
 
 #endif // GAMESERVER_H

@@ -37,3 +37,8 @@ void Joueur::defaite()
 {
     this->status = "Défaite.";
 }
+
+Pierre Joueur::getPierre()
+{
+    return this->pierre;
+}
