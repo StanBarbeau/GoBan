@@ -26,7 +26,7 @@ private :
 
 public:
     explicit MainWindow(QWidget *parent = 0,GameServer* GS=0);
-    Qpoint MainWindow::ClickPosToCases(QPoint q);
+    QPoint clickPosToCases(QPoint q);
     ~MainWindow();
 
 

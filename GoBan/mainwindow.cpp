@@ -63,20 +63,20 @@ void MainWindow::on_radioButton_toggled(bool checked)
 }
 
 
+QPoint MainWindow::clickPosToCases(QPoint q){
+    return q;
+}
 void MainWindow::on_goban_Button_clicked()
 {
     QPoint p = this->mapFromGlobal(QCursor::pos());
     //qDebug()<<p.rx()<<" "<<p.ry();
-    p=ClickPosToCases(p);
-    if (p.rx!=-1 && P.ry()!=-1){// Case where the click position doesn't match with a cross of the Goban
+    p=clickPosToCases(p);
+    if (p.rx()!=-1 && p.ry()!=-1){// Case where the click position doesn't match with a cross of the Goban
     //TODOFUNCTION Barbeau
     //this->gserver->putStoneRequest(p.rx(),p.ry());
     }
-   this->ui->gobanFrame->update();
+   update();
 
 }
 
-Qpoint MainWindow::ClickPosToCases(QPoint q){
-
-}
 

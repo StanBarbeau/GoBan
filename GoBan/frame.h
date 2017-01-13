@@ -10,7 +10,7 @@ public:
     Frame( QWidget* );
     GameServer* gserver=0;
 
-    void connectToServer(GameServer g);
+    void connectToServer(GameServer* g);
     void setCircleRadius( int );
 
 protected:
