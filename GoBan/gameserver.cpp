@@ -4,6 +4,7 @@
 
 GameServer::GameServer()
 {
+    this->dimension=19;
     this->etat = false;
     this->player1 = Joueur("Blanc");
     this->player2 = Joueur("Noir");
