@@ -22,22 +22,15 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 private :
-    Frame* stonesFrame;
+    GameServer* gserver;
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    void init();
-    void test();
+    explicit MainWindow(QWidget *parent = 0,GameServer* GS=0);
+    Qpoint MainWindow::ClickPosToCases(QPoint q);
     ~MainWindow();
-protected:
-    void paintEvent(QPaintEvent *event);
 
 
 private slots:
-   // void drawCircle(QPoint origin, int radius);
-
-   // void addCircle(QPoint origin, int radius);
-
     void on_quit_button_clicked();
 
     void on_size_box_currentIndexChanged(const QString &arg1);

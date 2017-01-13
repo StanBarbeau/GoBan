@@ -8,11 +8,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    GameServer *gs =new GameServer();
+    MainWindow w(0,gs);
     w.show();
 
-    GameServer gs = GameServer();
-    gs.lancerPartie();
 
     return a.exec();
 }

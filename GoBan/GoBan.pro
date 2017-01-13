@@ -18,14 +18,18 @@ SOURCES += main.cpp\
     pierre.cpp \
     cases.cpp \
     joueur.cpp \
-    gameserver.cpp
+    gameserver.cpp \
+    frame.cpp \
+    button.cpp
 
 HEADERS  += mainwindow.h\
     plateau.h \
     pierre.h \
     cases.h \
     joueur.h \
-    gameserver.h
+    gameserver.h \
+    frame.h \
+    button.h
 
 FORMS    += mainwindow.ui
 
