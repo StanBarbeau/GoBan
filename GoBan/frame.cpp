@@ -10,7 +10,7 @@ Frame::Frame( QWidget* parent )
     this->setAttribute( Qt::WA_TransparentForMouseEvents );
 }
 
-void Frame::connectToServer(GameServer g){
+void Frame::connectToServer(GameServer* g){
     this->gserver=g;
 }
 
