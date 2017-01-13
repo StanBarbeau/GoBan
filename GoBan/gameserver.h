@@ -21,8 +21,8 @@ public:
     bool newGame();
     void setDimension(int dim);
     int putStoneRequest(int x, int y);
-    void playerPassed();
-    void playerResigned();
+    Joueur playerPassed();
+    Joueur playerResigned();
     Plateau getPlateau();
 };
 

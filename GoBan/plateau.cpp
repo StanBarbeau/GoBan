@@ -14,11 +14,11 @@ Plateau::Plateau(int dimension)
     this->casesvides = this->dimensionreal * this->dimensionreal;
     this->marge = (this->dimensionmax - this->dimensionreal) / 2;
 
-    for (int j = 0; j < _sizey; j++)
+    for (int j = 0; j < this->sizey; j++)
     {
-        for(int i = 0; i < _sizex; i++)
+        for(int i = 0; i < this->sizex; i++)
         {
-            this->cases[ i + j * _sizex] = Cases(i,j);
+            this->cases[ i + j * this->sizex] = Cases(i,j);
         }
     }
 }
@@ -59,7 +59,7 @@ int Plateau::nbrliberte(int x, int y, const Pierre &pierre)
 {
     int res = 4;
 
-    if ()
+    //if ()
 
     return res;
 }

@@ -59,7 +59,7 @@ int GameServer::putStoneRequest(int x, int y)
         {
             this->getPlateau().setCases(x,y,this->activplayer.getPierre());
             res += (100*x + y);
-
+            /*
             if (this->activplayer == this->player1)
             {
                 res += 10000;
@@ -68,6 +68,7 @@ int GameServer::putStoneRequest(int x, int y)
             {
                 res += 20000;
             }
+            */
         }
     }
 
@@ -83,16 +84,16 @@ Joueur GameServer::playerPassed()
 {
     Joueur passing = Joueur(this->activplayer);
 
-    if (this->activplayer == this->player1)
+    /*if (this->activplayer == this->player1)
     {
         this->activplayer = this->player2;
     }
     else
     {
         this->activplayer = this->player1;
-    }
+    }*/
 
-    return passing
+    return passing;
 }
 
 Joueur GameServer::playerResigned()
@@ -100,7 +101,7 @@ Joueur GameServer::playerResigned()
     this->etat = false;
     Joueur winner;
 
-    if (this->activplayer == this->player1)
+    /*if (this->activplayer == this->player1)
     {
         this->player1.defaite();
         this->player2.victoire();
@@ -113,7 +114,7 @@ Joueur GameServer::playerResigned()
         this->player2.defaite();
 
         winner = Joueur(this->player1);
-    }
+    }*/
 
     return winner;
 }
