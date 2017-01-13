@@ -133,16 +133,6 @@
       <string>19x19</string>
      </property>
     </item>
-    <item>
-     <property name="text">
-      <string>13x13</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>9x9</string>
-     </property>
-    </item>
    </widget>
    <widget class="QPushButton" name="quit_button">
     <property name="geometry">
@@ -209,27 +199,27 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QRadioButton" name="radioButton">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>230</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tahoma</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>AI Activated</string>
-     </property>
-    </widget>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>170</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>AI Activated</string>
+    </property>
    </widget>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
