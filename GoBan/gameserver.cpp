@@ -1,5 +1,6 @@
 #include "gameserver.h"
 #include <iostream>
+#include <QDebug>
 
 
 GameServer::GameServer()
@@ -9,6 +10,10 @@ GameServer::GameServer()
     this->player1 = Joueur("Blanc");
     this->player2 = Joueur("Noir");
     this->activplayer = this->player1;
+}
+
+bool GameServer::getState(){
+    return this->etat;
 }
 
 bool GameServer::newGame()
@@ -48,6 +53,14 @@ bool GameServer::testKo(int x, int y)
 int GameServer::putStoneRequest(int x, int y)
 {
     int res = 0;
+    if(!this->etat){
+        qDebug()<< "game not initialized, please press the play button";
+        return 3;
+    }else {
+        this->board.setCases(x,y,Pierre("white"));
+    }
+    //std::string col=this->board.getCases(x,y).getContenu().getColor();
+    //qDebug()<<col.c_str()<< "end";
 /*
     if (this->etat)
     {

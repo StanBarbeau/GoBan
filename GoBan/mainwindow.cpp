@@ -73,6 +73,8 @@ void MainWindow::on_goban_Button_clicked()
     p=clickPosToCases(p);
     if (p.rx()>=0 && p.rx()<19 && p.ry()>=0 && p.ry()<19){// Case where the click position matches with the size of the goban
        this->gserver->putStoneRequest(p.rx(),p.ry());
+       // qDebug()<<p.rx()<<p.ry();
+
     }
    update();
 

@@ -24,6 +24,7 @@ public:
     Joueur playerPassed();
     Joueur playerResigned();
     Plateau getPlateau();
+    bool getState();
 };
 
 #endif // GAMESERVER_H

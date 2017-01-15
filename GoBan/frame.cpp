@@ -1,6 +1,8 @@
 #include <QPainter>
-
+#include "QDebug"
 #include "frame.h"
+#include "iostream"
+#include "string"
 
 Frame::Frame( QWidget* parent )
     : QFrame( parent )
@@ -12,6 +14,7 @@ Frame::Frame( QWidget* parent )
 
 void Frame::connectToServer(GameServer* g){
     this->gserver=g;
+    this->init_done=true;
 }
 
 void Frame::setCircleRadius( int radius )
@@ -23,23 +26,27 @@ void Frame::setCircleRadius( int radius )
 void Frame::paintEvent( QPaintEvent* pe )
 {
     QFrame::paintEvent( pe );
-    if(gserver!=0 && stone_radius > 0 )
+    if(this->init_done && stone_radius > 0 )
     {
-        QPainter p( this );
-        for(int i=0;i<19;i++)
+        if(this->gserver->getState())
         {
-            for (int j=0 ; j<19 ; j++)
+            Plateau board=this->gserver->getPlateau();
+            QPainter p( this );
+            for(int i=0;i<19;i++)
             {
-                /*Cases caseij=this->gserver->getPlateau().getCases(i,j);
-                if(!caseij.isFree())
+                for (int j=0 ; j<19 ; j++)
                 {
-                    if(caseij.getContenu().getColor()=="white"){
-                        p.setBrush(QBrush(Qt::white));
-                    } else {
-                        p.setBrush(QBrush(Qt::black));
+                    Cases caseij=board.getCases(i,j);
+                    if(!caseij.isFree())
+                    {
+                        if(caseij.getContenu().getColor()=="white"){
+                            p.setBrush(QBrush(Qt::white));
+                        } else {
+                            p.setBrush(QBrush(Qt::black));
+                        }
+                        p.drawEllipse(QPoint(15+22.8*i,15+22.8*j), stone_radius, stone_radius );
                     }
-                    p.drawEllipse(QPoint(15+22.8*i,15+22.8*j), stone_radius, stone_radius );
-                }*/
+                }
             }
         }
     }

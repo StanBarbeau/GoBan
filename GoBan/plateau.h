@@ -14,7 +14,7 @@ class Plateau
     int dimensionreal;
     int casesvides;
     int marge;
-    Cases cases[];
+    Cases cases[19*19];
 
 public:
     Plateau();

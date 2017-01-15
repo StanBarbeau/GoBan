@@ -166,6 +166,14 @@
       <height>461</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -179,6 +187,9 @@
       <width>1000</width>
       <height>1000</height>
      </size>
+    </property>
+    <property name="default">
+     <bool>false</bool>
     </property>
     <property name="flat">
      <bool>true</bool>

@@ -1,5 +1,6 @@
 #include "plateau.h"
 #include <algorithm>
+#include "qDebug"
 
 Plateau::Plateau()
 {
@@ -8,6 +9,7 @@ Plateau::Plateau()
 
 Plateau::Plateau(int dimension)
 {
+
     this->sizex = this->dimensionmax;
     this->sizey = this->dimensionmax;
     this->dimensionreal = std::max(0, std::min(this->dimensionmax, dimension));
