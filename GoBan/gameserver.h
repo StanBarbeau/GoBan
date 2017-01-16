@@ -10,11 +10,15 @@ class GameServer
     Joueur player1;
     Joueur player2;
     Joueur activplayer;
+    int tour;
+    bool last_passed;
+    Plateau previous_board;
 
     bool etat;
     Plateau board;
 
     bool testKo(int x, int y);
+    bool isSuicide(int,int);
 
 public:
     GameServer();

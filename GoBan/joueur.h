@@ -10,6 +10,7 @@ class Joueur
     Pierre pierre;
     std::string status;
 public:
+    bool isEqual(Joueur other);
     Joueur();
     Joueur(std::string _color);
     void setColor(std::string newcolor);

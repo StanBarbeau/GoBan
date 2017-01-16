@@ -26,10 +26,10 @@ void Frame::setCircleRadius( int radius )
 void Frame::paintEvent( QPaintEvent* pe )
 {
     QFrame::paintEvent( pe );
-    if(this->init_done && stone_radius > 0 )
+    if(this->init_done&& stone_radius > 0 )
     {
-        if(this->gserver->getState())
-        {
+       // if(this->gserver->getState())
+        //{
             Plateau board=this->gserver->getPlateau();
             QPainter p( this );
             for(int i=0;i<19;i++)
@@ -48,6 +48,6 @@ void Frame::paintEvent( QPaintEvent* pe )
                     }
                 }
             }
-        }
+        //}
     }
 }

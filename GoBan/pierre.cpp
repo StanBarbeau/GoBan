@@ -14,6 +14,10 @@ std::string Pierre::getColor(){
     return this->color;
 }
 
+bool Pierre::isEqual(Pierre p){
+    return (p.getColor()==this->getColor());
+}
+
 bool Pierre::isNotSet()
 {
     return (this->color == "undefined");

@@ -6,6 +6,10 @@ Joueur::Joueur()
     this->status = "En cours d'initialisation...";
 }
 
+bool Joueur::isEqual(Joueur other){
+    return this->color==other.color ;
+}
+
 Joueur::Joueur(std::string _color)
 {
     this->color = _color;

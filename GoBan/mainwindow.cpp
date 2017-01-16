@@ -72,8 +72,8 @@ void MainWindow::on_goban_Button_clicked()
     QPoint p = this->mapFromGlobal(QCursor::pos());
     p=clickPosToCases(p);
     if (p.rx()>=0 && p.rx()<19 && p.ry()>=0 && p.ry()<19){// Case where the click position matches with the size of the goban
+       //qDebug()<<p.rx()<<p.ry();
        this->gserver->putStoneRequest(p.rx(),p.ry());
-       // qDebug()<<p.rx()<<p.ry();
 
     }
    update();
